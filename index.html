@@ -5,21 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
     <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
-    <script type="module" crossorigin src="/numton/assets/index-Kn_60Swv.js"></script>
-    <link rel="stylesheet" crossorigin href="/numton/assets/index-DdBiyCzK.css">
+    <script type="module" crossorigin src="/numton/assets/index-BYwhAuu3.js"></script>
+    <link rel="stylesheet" crossorigin href="/numton/assets/index-BSuFT4V0.css">
   </head>
   <body>
     <div id="root"></div>
     <script>
-      const tg = window.Telegram.WebApp;
-      tg.expand();
-      tg.MainButton.text = "Закрыть";
-      tg.MainButton.show();
-
-      setTimeout(() => {
-        const user = tg.initDataUnsafe.user;
-        alert(`Привет, ${user.first_name}!`);
-      }, 1000);
+      if (window.Telegram) {
+        const tg = window.Telegram.WebApp;
+        tg.expand();
+        setTimeout(() => {
+          const user = tg.initDataUnsafe.user;
+          alert(`Привет, ${user.first_name}!`);
+        }, 1000);
+      }
     </script>
   </body>
 </html>
